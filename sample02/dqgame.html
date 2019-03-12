@@ -45,11 +45,11 @@
 
                 // モンスターの残りHPを算出する
                 mHp = mHp - pAttck;
-                
+
                 // 生きているか死んでいるか確認する 
                 // 生きているときは「0」、死んでいるときは「1」となる
                 dieCheck();
-                
+
                 $(".monsterLi>li").addClass("damage");
                 setTimeout(function () { $(".monsterLi>li").removeClass("damage"); }, 1500);
 
@@ -75,10 +75,10 @@
             // **********************************//
             //             ハンズオン3　           //
             // *********************************//
-       
+
             $(".guard>a").click(function () {
                 $(".message>p").text("あなたはみがまえています。");
-                
+
                 mAttck = Math.floor(Math.random() * 10 + 20);
                 mAttck = Math.floor(mAttck * 0.4);
                 setTimeout(function () {
@@ -96,7 +96,7 @@
                 return false;
             });
 
-          
+
 
 
             //プレイヤーの死亡チェック
@@ -134,8 +134,8 @@
             init();
         });
 
-     
-       
+
+
 
     </script>
 </head>
@@ -173,9 +173,9 @@
                             まだjsの機能は実装していないので、一旦コメントにします！
 
                          -->
-                         <li class="escape"><a href="">にげる</a></li>
+                        <li class="escape"><a href="">にげる</a></li>
                         <li class="guard"><a href="">ぼうぎょ</a></li>
-                        <li class="item"><a href="">どうぐ</a></li> 
+                        <li class="item"><a href="">どうぐ</a></li>
                     </ul>
                 </div>
                 <div class="message">
