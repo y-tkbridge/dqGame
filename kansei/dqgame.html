@@ -9,7 +9,7 @@
     <script type="text/javascript">
         $(function () {
             setTimeout(function () {
-                $("h1").text("ドラゴンクエスト風戦闘シーン");
+                $("h1").text("ドラゴン○エスト風戦闘シーン");
             }, 100);
             //初期化 戦う敵のパラメーターを設定する
             $(function init() {
@@ -30,7 +30,7 @@
                 //あなたのターン
                 if (turn) {
                     //あなたのこうげき
-                    $(".message>p").text("あなたのこうげき、キングスライムに " + pAttck + "のダメージ");
+                    $(".message>p").text("あなたのこうげき、モンスターに " + pAttck + "のダメージ");
                     mHp = mHp - pAttck;
                     dieCheck();
                     $(".monsterLi>li").addClass("damage");
@@ -40,7 +40,7 @@
                             //キングスライムのこうげき
                             $(".monsterLi>li").addClass("attck");
                             $(".dqArea").addClass("shock");
-                            $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ");
+                            $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ");
                             pHp = pHp - mAttck;
                             dieCheck();
                             $(".player01Li>.hp").text(pHp);
@@ -51,10 +51,10 @@
                         }, 1500);
                     }
                 } else {
-                    //キングスライムのこうげき
+                    //モンスターのこうげき
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ");
                     pHp = pHp - mAttck;
                     dieCheck();
                     setTimeout(function () {
@@ -65,7 +65,7 @@
                         setTimeout(function () {
                             //あなたのこうげき
                             $(".monsterLi>li").addClass("damage");
-                            $(".message>p").text("あなたのこうげき、キングスライムに " + pAttck + "のダメージ");
+                            $(".message>p").text("あなたのこうげき、モンスターに " + pAttck + "のダメージ");
                             mHp = mHp - pAttck;
                             dieCheck();
                             $(".player01Li>.hp").text(pHp);
@@ -79,13 +79,13 @@
             /********* ぼうぎょ *************/
             $(".guard>a").click(function () {
                 $(".message>p").text("あなたはみがまえています。");
-                //キングスライムのこうげき
+                //モンスターのこうげき
                 attckP();
                 mAttck = Math.floor(mAttck * 0.4);
                 setTimeout(function () {
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ！");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ！");
                     pHp = pHp - mAttck;
                     dieCheck();
                     $(".player01Li>.hp").text(pHp);
@@ -103,7 +103,7 @@
                     $(".player01Li>.hp").text("0");
                     die = 1;
                     //pAttck=0;
-                    //$(".message>p").text("キングスライムのこうげき、"+mAttck+"のダメージ。あなたはしにました。");
+                    //$(".message>p").text("モンスターのこうげき、"+mAttck+"のダメージ。あなたはしにました。");
                     setTimeout(function () { $(".message>p").text("あなたはしにました。"); }, 1300);
                     $(".commend").css("display", "none");
                     $(".dqArea").removeClass("badCndtn");
@@ -111,7 +111,7 @@
                     return die;
                 } else { die = 0; }
                 if (mHp <= 0) {
-                    setTimeout(function () { $(".message>p").text("キングスライムをたおしました。"); }, 1100);
+                    setTimeout(function () { $(".message>p").text("モンスターをたおしました。"); }, 1100);
                     $(".monsterLi img").css("display", "none");
                     
 
@@ -195,7 +195,7 @@
                     </ul>
                 </div>
                 <div class="message">
-                    <p>キングスライムがあらわれた！</p>
+                    <p>モンスターがあらわれた！</p>
                 </div>
             </div>
         </div>

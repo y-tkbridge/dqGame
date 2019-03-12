@@ -39,14 +39,14 @@
                 // rurnが「true」だった場合に処理が実行する
                 if (turn) {
                     //あなたのこうげき
-                    $(".message>p").text("あなたのこうげき、キングスライムに " + pAttck + "のダメージ");
+                    $(".message>p").text("あなたのこうげき、モンスターに " + pAttck + "のダメージ");
                     mHp = mHp - pAttck;
                     dieCheck();
                     $(".monsterLi>li").addClass("damage");
                     setTimeout(function () { $(".monsterLi>li").removeClass("damage"); }, 1500);
                     if (die == 0) {
                         setTimeout(function () {
-                            //キングスライムのこうげき
+                            //モンスターのこうげき
                             $(".monsterLi>li").addClass("attck");
                             $(".dqArea").addClass("shock");
                             $(".message>p").text("モンスターの攻撃" + mAttck + "のダメージ");
@@ -61,10 +61,10 @@
                     }
                     //turn が false だった場合に以下の処理を実行する
                 } else {
-                    //キングスライムのこうげき
+                    //モンスターのこうげき
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ");
                     pHp = pHp - mAttck;
                     dieCheck();
                     setTimeout(function () {
@@ -75,7 +75,7 @@
                         setTimeout(function () {
                             //あなたのこうげき
                             $(".monsterLi>li").addClass("damage");
-                            $(".message>p").text("あなたのこうげき、キングスライムに " + pAttck + "のダメージ");
+                            $(".message>p").text("あなたのこうげき、モンスターに " + pAttck + "のダメージ");
                             mHp = mHp - pAttck;
                             dieCheck();
                             $(".player01Li>.hp").text(pHp);
@@ -89,13 +89,13 @@
             /********* ぼうぎょ *************/
             $(".guard>a").click(function () {
                 $(".message>p").text("あなたはみがまえています。");
-                //キングスライムのこうげき
+                //モンスターのこうげき
                 attckP();
                 mAttck = Math.floor(mAttck * 0.4);
                 setTimeout(function () {
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ！");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ！");
                     pHp = pHp - mAttck;
                     dieCheck();
                     $(".player01Li>.hp").text(pHp);
@@ -122,7 +122,7 @@
                 setTimeout(function () {
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ！");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ！");
                     pHp = pHp - mAttck;
                     dieCheck();
                     $(".player01Li>.hp").text(pHp);
@@ -205,7 +205,7 @@
                 return die;
             } else { die = 0; }
             if (mHp <= 0) {
-                setTimeout(function () { $(".message>p").text("キングスライムをたおしました。"); }, 1100);
+                setTimeout(function () { $(".message>p").text("モンスターをたおしました。"); }, 1100);
                 $(".monsterLi img").css("display", "none");
 
                 $(".commend").css("display", "none");
@@ -237,7 +237,7 @@
                         <li class="mp num">MP</li>
                     </ul>
                     <ul class="player01Li">
-                        <li class="plyrNm">だいだい</li>
+                        <li class="plyrNm">ゆうしゃ</li>
                         <li class="lv num">999</li>
                         <li class="hp num">999</li>
                         <li class="mp num">999</li>
@@ -249,7 +249,7 @@
                     </ul>
                 </div>
                 <div class="commend">
-                    　<p class="commendTtl">だいだい</p>
+                    　<p class="commendTtl">ゆうしゃ</p>
                     <ul class="player01Li">
                         <li class="battle cur"><a href="">たたかう</a></li>
                         <li class="escape"><a href="">にげる</a></li>
@@ -258,7 +258,7 @@
                     </ul>
                 </div>
                 <div class="message">
-                    <p>キングスライムがあらわれた！</p>
+                    <p>モンスターがあらわれた！</p>
                 </div>
             </div>
         </div>
