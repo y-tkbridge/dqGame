@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- jQueryを実行するためのモジュールを読み込む -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>sample1</title>
+    <style>
+        .damage {
+            -webkit-animation-name: "damage";
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-duration: 1s;
+        }
+
+        @-webkit-keyframes damage{
+            10% {opacity: 0.5;-webkit-transform: translate(2px);}
+            20% {opacity: 1;}
+            30% {opacity: 0.5;-webkit-transform: translate(-2px);}
+            40% {opacity: 1;}
+            50% {opacity: 0.5;-webkit-transform: translate(2px);}
+            60% {opacity: 1;}
+            70% {opacity: 0.5;-webkit-transform: translate(-2px);}
+            80% {opacity: 1;}
+            90% {opacity: 0.5;-webkit-transform: translate(2px);}
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- html で定義した要素の値を変更してみよう！  -->
+    <script>
+        $(function () {
+            $(".monsterName").click(function () {
+                alert("クリックされました");
+                $("img").toggleClass("damage");
+            });
+
+        });
+
+
+    </script>
+
+
+
+
+    </script>
+    <!-- Player の情報を表示して見よう-->
+    <div class="player">
+        <h1>プレイヤー</h1>
+        <ul class="statuslist">
+            <li class="name">なまえ</li>
+            <li class="level">レベル</li>
+            <li class="hp">体力</li>
+            <li class="mp">魔力</li>
+        </ul>
+        <ui class="playerValue">
+            <li class="name">たかはし</li>
+            <li class="level">3</li>
+            <li class="hp">10</li>
+            <li class="mp">10</li>
+        </ui>
+    </div>
+
+    <!-- 画像の読み込み
+
+
+    src="img/doraki.png" //ドラキン
+    src="img/gigantes.png"　//ギガンテス
+    src="img/metakin.png" // メタルキング
+
+    /*********************************/
+            画像を表示してみよう！
+    /*********************************/
+
+-->
+
+    <img class="monsterName" src="img/metakin.png">
+    <p>メタルキング</p>
+
+</body>
+
+</html>
