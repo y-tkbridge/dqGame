@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <!-- jQueryを実行するためのモジュールを読み込む -->
@@ -13,6 +13,12 @@
             -webkit-animation-duration: 1s;
         }
 
+        .shock{
+            -webkit-animation-name:shock;
+            -webkit-animation-iteration-count:1;
+            -webkit-animation-duration:1s;
+            }
+
         @-webkit-keyframes damage{
             10% {opacity: 0.5;-webkit-transform: translate(2px);}
             20% {opacity: 1;}
@@ -25,28 +31,29 @@
             90% {opacity: 0.5;-webkit-transform: translate(2px);}
         }
 
+
+        @-webkit-keyframes shock{
+            20% {-webkit-transform: translate(20px);}
+            40% {-webkit-transform: translate(-20px);}
+            60% {-webkit-transform: translate(10px);}
+            80% {-webkit-transform: translate(-10px);}
+        }
     </style>
 </head>
 
 <body>
     <!-- html で定義した要素の値を変更してみよう！  -->
     <script>
-         
         $(function () {
             $(".monsterName").click(function () {
                 alert("クリックされました");
+                //「damage」を「showck」に変えてみよう！
                 $("img").toggleClass("damage");
             });
 
         });
-
-
     </script>
 
-
-
-
-    </script>
     <!-- Player の情報を表示して見よう-->
     <div class="player">
         <h1>プレイヤー</h1>
