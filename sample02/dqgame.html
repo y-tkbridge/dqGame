@@ -6,12 +6,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/demo-style.css" />
     <link rel="stylesheet" type="text/css" href="css/dq.css" />
-    <title>ドラゴンクエスト風戦闘シーン</title>
+    <title>ドラゴンク○スト風戦闘シーン</title>
     <script type="text/javascript">
         $(function () {
             'use restrick'
             setTimeout(function () {
-                $("h1").text("ドラゴンクエスト風戦闘シーン");
+                $("h1").text("ドラゴンク○スト風戦闘シーン");
             }, 100);
             // **********************************//
             //             ハンズオン１　          //
@@ -41,7 +41,7 @@
                 mAttck = Math.floor(Math.random() * 10 + 20);
 
 
-                $(".message>p").text("あなたのこうげき、キングスライムに " + pAttck + "のダメージ");
+                $(".message>p").text("あなたのこうげき、モンスターに " + pAttck + "のダメージ");
 
                 // モンスターの残りHPを算出する
                 mHp = mHp - pAttck;
@@ -59,7 +59,7 @@
                         //キングスライムのこうげき
                         $(".monsterLi>li").addClass("attck");
                         $(".dqArea").addClass("shock");
-                        $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ");
+                        $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ");
                         pHp = pHp - mAttck;
                         dieCheck();
                         $(".player01Li>.hp").text(pHp);
@@ -84,7 +84,7 @@
                 setTimeout(function () {
                     $(".monsterLi>li").addClass("attck");
                     $(".dqArea").addClass("shock");
-                    $(".message>p").text("キングスライムのこうげき、" + mAttck + "のダメージ！");
+                    $(".message>p").text("モンスターのこうげき、" + mAttck + "のダメージ！");
                     pHp = pHp - mAttck;
                     dieCheck();
                     $(".player01Li>.hp").text(pHp);
@@ -113,7 +113,7 @@
                     return die;
                 } else { die = 0; }
                 if (mHp <= 0) {
-                    setTimeout(function () { $(".message>p").text("キングスライムをたおしました。"); }, 1100);
+                    setTimeout(function () { $(".message>p").text("モンスターをたおしました。"); }, 1100);
                     $(".monsterLi img").css("display", "none");
                     $(".commend").css("display", "none");
                     die = 1;
@@ -179,7 +179,7 @@
                     </ul>
                 </div>
                 <div class="message">
-                    <p>キングスライムがあらわれた！</p>
+                    <p>モンスターがあらわれた！</p>
                 </div>
             </div>
         </div>
