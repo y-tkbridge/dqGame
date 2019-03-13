@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/demo-style.css" />
     <link rel="stylesheet" type="text/css" href="css/dq.css" />
-    <title>ドラゴンクエスト風戦闘シーン</title>
+    <title>ドラゴン○エスト風戦闘シーン</title>
     <script type="text/javascript">
         $(function () {
             setTimeout(function () {
@@ -113,9 +113,7 @@
                 if (mHp <= 0) {
                     setTimeout(function () { $(".message>p").text("モンスターをたおしました。"); }, 1100);
                     $(".monsterLi img").css("display", "none");
-                    
-
-                    //$(".commend").css("display", "none");
+                    $(".commend").css("display", "none");
                     die = 1;
                 } else { die = 0; }
                 if (pHp <= 30) {
